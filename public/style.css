@@ -1,0 +1,29 @@
+body {
+    background: #fffdf5;
+    font-family: 'Lucida Sans Unicode', 'Arial', serif;
+    color: #4e4e4e;
+    text-decoration: none;
+}
+
+h1,
+h3,
+h4,
+header .btn {
+    font-weight: 400;
+}
+
+h6,
+header {
+    font-weight: normal;
+    font-size: 75%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+normal {
+    font-weight: bold;
+}
+.u-pull-right {
+  float: right; }
