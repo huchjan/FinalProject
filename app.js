@@ -18,5 +18,23 @@ app.get('/about', function (req, res) {
     });
 });
 
+app.get('/projects/:name', function (req, res) {
+    res.render('projects', {
+        name: "janet"
+    });
+});
+
+app.get('/resume/:name', function (req, res) {
+    res.render('resume', {
+        name: "janet"
+    });
+});
+
+app.get('/contact/:name', function (req, res) {
+    res.render('contact', {
+        name: "janet"
+    });
+});
+
 app.use(express.static("public"));
 app.listen(3000);
