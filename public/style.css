@@ -1,8 +1,9 @@
 body {
-    background: #fffdf5;
+    background: white;
     font-family: 'Lucida Sans Unicode', 'Arial', serif;
     color: #4e4e4e;
     text-decoration: none;
+    font-size: 120%;
 }
 
 h1,
@@ -15,11 +16,12 @@ header .btn {
 h6,
 header {
     font-weight: normal;
-    font-size: 75%;
+    font-size: 100%;
 }
 
 a:link {
     text-decoration: none;
+    color: #9f9f9e;
 }
 
 normal {
