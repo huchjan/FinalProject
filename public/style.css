@@ -1,7 +1,7 @@
 body {
     background: white;
     font-family: 'Lucida Sans Unicode', 'Arial', serif;
-    color: #4e4e4e;
+    color: #5a5a5a;
     text-decoration: none;
     font-size: 100%;
 }
@@ -11,6 +11,8 @@ h3,
 h4,
 header .btn {
     font-weight: 400;
+    color: #5a5a5a;
+    ;
 }
 
 a:link {
@@ -22,13 +24,10 @@ normal {
     font-weight: bold;
 }
 
-
 .u-pull-right float {
     float: right;
     font-size: 50%;
 }
-
-
 
 .container {
     margin: 0 auto;
@@ -138,7 +137,6 @@ normal {
     .offset-by-one-third.column,
     .offset-by-one-third.columns {
         margin-left: calc(33.33333% + 0.5em);
-        
     }
     .offset-by-five.column,
     .offset-by-five.columns {
@@ -195,13 +193,79 @@ body {
     line-height: 1.6;
     font-weight: 400;
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #222;
+    color: #5a5a5a;
 }
 
 #body-projects {
     font-size: .85em;
     line-height: 2;
-    color: #6f6f6f;
+    color: #5a5a5a;
+}
+
+
+/*
+hover effects
+*/
+
+.item_container {
+    /*relative position makes this the parent element
+            which all of the absolutely positioned elements
+            will refer to for their starting point*/
+    position: relative;
+    /*Get rid of the blue focus border*/
+    outline: none;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.item_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.item_expand {
+    /*By default, don't show*/
+    display: none;
+    /*Make this an absolutely positioned element*/
+    position: absolute;
+    /*Background color with some transparency*/
+    background-color: rgba(0, 0, 255, 0.4);
+    /*Set width and height to be 4x original*/
+    width: 200%;
+    height: 200%;
+}
+
+.item_container:focus .item_expand {
+    /*When the parent element is clicked, show the child element*/
+    display: block;
+}
+
+.tl {
+    /*Anchor this absolute element in the top left*/
+    top: 0;
+    left: 0;
+}
+
+.tr {
+    top: 0;
+    right: 0;
+}
+
+.bl {
+    bottom: 0;
+    left: 0;
+}
+
+.br {
+    bottom: 0;
+    right: 0;
 }
 
 
@@ -281,18 +345,6 @@ h6 {
 
 p {
     margin-top: 0;
-}
-
-
-/* Links
-                    –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-a {
-    color: #1EAEDB;
-}
-
-a:hover {
-    color: #0FA0CE;
 }
 
 
@@ -716,29 +768,56 @@ hr {
     border-top: 1px solid #E1E1E1;
 }
 
+headerLogo {
+    float: left;
+    margin-top: 24px;
+    background: black;
+}
 
-.footer {
-    color:#fff;
+nav {
+    float: right;
+    margin: auto;
+}
+
+header {
+    color: #c7c7c7;
     line-height: 1;
-    text-transform: uppercase;
-    background: #009be8;
-    padding: 1em 0;
+    width: 100vw;
+    height: 8vh;
+    background: black;
+    padding: 24px 24px 24px 24px;
+    font-size: 1em;
+    margin-bottom: 3em;
+}
+
+footer {
+    color: #c7c7c7;
+    line-height: 1;
+    /*    text-transform: uppercase;*/
+    width: 100vw;
+    height: 8vh;
+    background: black;
+    padding: 24px 24px 24px;
     font-size: 0.5em;
-    margin-top:0.5em;
+    margin-top: 3em;
 }
 
 footer nav ul {
-    margin-top:0.5em;
+    margin-top: 0.5em;
 }
 
+
+/*
 footer nam ul li {
-    display:inline;
-    margin:0;
+    display: inline;
+    margin: 0;
 }
+*/
 
 .projects {
     line-height: 1.25;
 }
+
 
 /* Clearing
                     –––––––––––––––––––––––––––––––––––––––––––––––––– */
