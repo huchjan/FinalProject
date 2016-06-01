@@ -223,11 +223,19 @@ hover effects
 }
 
 .item_hover {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+    background-color: rgba(0, 0, 255, 0.4);
+}
+
+.item_container:hover .item_hover {
+    /*When the parent element is clicked, show the child element*/
+    display: block;
+    z-index: 2;
 }
 
 .item_expand {
@@ -236,7 +244,6 @@ hover effects
     /*Make this an absolutely positioned element*/
     position: absolute;
     /*Background color with some transparency*/
-    background-color: rgba(0, 0, 255, 0.4);
     /*Set width and height to be 4x original*/
     width: 200%;
     height: 200%;
@@ -245,6 +252,7 @@ hover effects
 .item_container:focus .item_expand {
     /*When the parent element is clicked, show the child element*/
     display: block;
+    z-index: 2;
 }
 
 .tl {
@@ -768,15 +776,14 @@ hr {
     border-top: 1px solid #E1E1E1;
 }
 
-headerLogo {
+.headerLogo {
     float: left;
-    margin-top: 24px;
-    background: black;
+    margin-top: 24px 24px 24px 24px;
 }
 
-nav {
+.nav {
     float: right;
-    margin: auto;
+/*    margin: auto;*/
 }
 
 header {
@@ -784,7 +791,6 @@ header {
     line-height: 1;
     width: 100vw;
     height: 8vh;
-    background: black;
     padding: 24px 24px 24px 24px;
     font-size: 1em;
     margin-bottom: 3em;
