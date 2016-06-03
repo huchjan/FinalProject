@@ -1,25 +1,16 @@
-<div class="container-fluid">
-    <div class="row">
+<!--<div class="container">-->
+<div class="container">
+    <br>
+    <br>
+    <div class="twelve columns">
     </div>
-
-    <!--    </div>-->
-    
-    {{! Handlebars template "projects.handlebars" which renders a project}}
-
-<h1>{{projects.name}}</h1>
-<div class="three columns">
-   <p>{{projects.slug}}</p>
-    <img src="{{projects.image}}" />
-</div>
-    
-    
-    
-    
-    
-
-<!--
-    <div class="container">
-        <div class="twelve columns" class="body-projects">
-            I am learning {{language}}. It is {{{adjective}}}.
--->
+    <div class="row">
+            <div class="two-thirds column" class="u-pull-left">
+                <img src="{{project.image}}" class="projectsImg"  />
+            </div>
+                <div class="one-third column" class="projectsCategory">
+                    <p>{{project.cat}}</p><h6>{{project.name}}</h6> {{project.desc}}
+                </div>
+            </div>
         </div>
+

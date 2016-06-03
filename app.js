@@ -18,22 +18,22 @@ app.get('/about', function (req, res) {
     });
 });
 
-app.get('/projects', function (req, res) {
-    res.render('projects', {
-        name: "brochures"
-    });
-});
+//app.get('/projects', function (req, res) {
+//    res.render('projects', {
+//        name: "brochures"
+//    });
+//});
 //__________________________________________
 //These are the URLS that users will visit
-//localhost:3000/project/mlk_tshirt
-//localhost:3000/project/wpx_tshirt
+//localhost:3000/projects/mlk_tshirt
+//localhost:3000/projects/wpx_tshirt
 
 //This is the route to the project page
 //:slug is a variable
 app.get("/projects/:slug", function(req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
-    //render the "project.handlebars" template using the project data
+    //render the "projects.handlebars" template using the project data
     res.render('projects', {
         project: projectData
     });
@@ -51,10 +51,10 @@ function getProjectBySlug(slug) {
 var projects = [
     {
         slug: "mlk_tshirt",
-        name: "MLK Day T-Shirt",
+        name: "MLK Day sweatshirt design",
         image: "mlk_illus.png",
-        desc: "Project created and screen printed these t shirts",
-        cat: "misc"
+        desc: "Sweatshirt design for Williams employees participating in Tulsa's Martin Luther King Day parade.",
+        cat: "Miscellaneous"
     },
     {
         slug: "wpx_tshirt",
@@ -65,11 +65,11 @@ var projects = [
     }
 ];
 
-app.get('/project', function (req, res) {
-    res.render('projects', {
-        name: "brochures"
-    });
-});
+//app.get('/projects', function (req, res) {
+//    res.render('projects', {
+//        name: "brochures"
+//    });
+//});
 //__________________________________________
 
 
