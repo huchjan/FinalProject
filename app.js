@@ -1,9 +1,11 @@
 var express = require('express');
-var exphbs  = require('express-handlebars');
+var exphbs = require('express-handlebars');
 
 var app = express();
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
+}));
 app.set('view engine', 'handlebars');
 
 app.get('/', function (req, res) {
@@ -18,27 +20,63 @@ app.get('/about', function (req, res) {
     });
 });
 
-//app.get('/projects', function (req, res) {
-//    res.render('projects', {
-//        name: "brochures"
-//    });
-//});
+app.get('/projects', function (req, res) {
+    res.render('projects', {
+        name: "brochures"
+    });
+});
+
 //__________________________________________
 //These are the URLS that users will visit
-//localhost:3000/projects/mlk_tshirt
-//localhost:3000/projects/wpx_tshirt
+//localhost:3000/misc/mlk_tshirt
+//localhost:3000/misc/wpx_tshirt
 
 //This is the route to the project page
 //:slug is a variable
-app.get("/projects/:slug", function(req, res) {
+app.get("/misc/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
     //render the "projects.handlebars" template using the project data
-    res.render('projects', {
+    res.render('misc', {
         project: projectData
     });
 });
 
+app.get("/brochures/:slug", function (req, res) {
+    //get the project data based on the requested slug
+    var projectData = getProjectBySlug(req.params.slug);
+    //render the "projects.handlebars" template using the project data
+    res.render('brochures', {
+        project: projectData
+    });
+});
+
+app.get("/invitations/:slug", function (req, res) {
+    //get the project data based on the requested slug
+    var projectData = getProjectBySlug(req.params.slug);
+    //render the "projects.handlebars" template using the project data
+    res.render('invitations', {
+        project: projectData
+    });
+});
+
+app.get("/logos/:slug", function (req, res) {
+    //get the project data based on the requested slug
+    var projectData = getProjectBySlug(req.params.slug);
+    //render the "projects.handlebars" template using the project data
+    res.render('logos', {
+        project: projectData
+    });
+});
+
+app.get("/annuals/:slug", function (req, res) {
+    //get the project data based on the requested slug
+    var projectData = getProjectBySlug(req.params.slug);
+    //render the "projects.handlebars" template using the project data
+    res.render('annuals', {
+        project: projectData
+    });
+});
 //get the project data based on the slug
 function getProjectBySlug(slug) {
     for (var i = 0; i < projects.length; i++) {
@@ -54,23 +92,87 @@ var projects = [
         name: "MLK Day sweatshirt design",
         image: "mlk_illus.png",
         desc: "Sweatshirt design for Williams employees participating in Tulsa's Martin Luther King Day parade.",
-        cat: "Miscellaneous"
+        cat: "MISCELLANEOUS"
     },
     {
         slug: "wpx_tshirt",
-        name: "WPX Family Picnic T-Shirt",
+        name: "WPX Family Picnic Tee",
         image: "WPX_Picnic_Tee.jpg",
-        desc: "Designed a t-shirt for this family picnic",
-        cat: "misc"
+        desc: "T-shirt designed for a WPX employee event at the Tulsa Drillers' new ballpark",
+        cat: "MISCELLANEOUS"
+    },
+    {
+        slug: "wpx_vehiclewrap",
+        name: "WPX Vehicle Wrap",
+        image: "Vehicle_Wrap.jpg",
+        desc: "When the WPX brand was launched in 2012, I designed the wrap for the company's trucks that ran on compressed natural gas.",
+        cat: "MISCELLANEOUS"
+    }, 
+    {
+        slug: "wpx_tradeshow",
+        name: "Williams Tradeshow Display",
+        image: "Tradeshow1.jpg",
+        desc: "Popup display created for Williams' Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a tv monitor.",
+        cat: "MISCELLANEOUS"
+    },
+    {
+        slug: "annual_enrollment",
+        name: "WPX Benefits Brochure",
+        image: "Health_Care_Broch.jpg",
+        desc: "Brochure designed for WPX's employees and retirees",
+        cat: "BROCHURES"
+    },
+    {
+        slug: "tradition_broch",
+        name: "A Tradition America Counts On brochure",
+        image: "Tradition_brochure_med.jpg",
+        desc: "Capabilities brochure designed and produced for Williams",
+        cat: "BROCHURES"
+    },
+    {
+        slug: "worldchallenge_invite",
+        name: "Williams World Challenge invitation",
+        image: "World_Challenge_Invite.jpg",
+        desc: "Invitation and custom golf ball sleeve created for The Williams World Challenge. Williams partnered with the Tiger Woods Foundation, which benefitted underprivileged kids, and was a major sponsor for several years.",
+        cat: "INVITATIONS"
+    },
+    {
+        slug: "rigmosaic_invite",
+        name: "Rig Mosaic invitation",
+        image: "RigMosaicInvite.jpg",
+        desc: "Invitation created for the unveiling of a mosaic commissioned by Williams.",
+        cat: "INVITATIONS"
+    },
+    {
+        slug: "stpats5k_logos",
+        name: "St. Patrick's Day 5k logo",
+        image: "St_Patricks_Day_5k.jpg",
+        desc: "Logo designed for an annual 5k race in Tulsa.",
+        cat: "LOGOS"
+    },
+    {
+        slug: "teamwms_logos",
+        name: "Team Williams MS150 logo",
+        image: "MS150_TeamWms.png",
+        desc: "Logo designed for an annual 5k race in Tulsa.",
+        cat: "LOGOS"
+    },
+    {
+        slug: "minuteman_logos",
+        name: "Minuteman Exploration logo",
+        image: "Minuteman_Logo.jpg",
+        desc: "Logo designed for WPX Energy.",
+        cat: "LOGOS"
+    },
+    {
+        slug: "WPX_annual",
+        name: "WPX Energy Annual Report",
+        image: "WPX_Annual_Report2013.jpg",
+        desc: "Annual report project for WPX Energy.",
+        cat: "ANNUAL REPORTS"
     }
 ];
 
-//app.get('/projects', function (req, res) {
-//    res.render('projects', {
-//        name: "brochures"
-//    });
-//});
-//__________________________________________
 
 
 app.get('/resume', function (req, res) {
@@ -79,7 +181,7 @@ app.get('/resume', function (req, res) {
     });
 });
 
-app.get('/contact/:name', function (req, res) {
+app.get('/contact', function (req, res) {
     res.render('contact', {
         name: "janet"
     });
