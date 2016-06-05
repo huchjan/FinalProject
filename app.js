@@ -138,16 +138,16 @@ var projects = [
     },
     {
         slug: "annual_enrollment",
-        name: "WPX Benefits Brochure",
+        name: "Williams Benefits Brochure",
         image: "Health_Care_Broch.jpg",
-        desc: "Brochure designed for WPX's employees and retirees",
+        desc: "Part of Williams' annual benefits enrollment rollout, this brochure was designed to let employees and retirees know how to get the most from their healthcare benefits.",
         cat: "BROCHURES"
     },
     {
-        slug: "tradition_broch",
-        name: "Williams capabilities brochure",
-        image: "Tradition_brochure_med.jpg",
-        desc: "Capabilities brochure designed and produced for Williams",
+        slug: "campfire_broch",
+        name: "Campfire USA brochure",
+        image: "Camp_Fire_Brochure.jpg",
+        desc: "Camp Fire USA pro bono brochure created while serving on Camp Fire's Green Country Council PR Committee.",
         cat: "BROCHURES"
     },
     {

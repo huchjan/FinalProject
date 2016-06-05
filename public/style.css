@@ -333,14 +333,15 @@ resumeHeader {
     font-size: 1.3rem;
     line-height: 2;
     font-weight: 500;
-    color:#67aaaa;
+    color: #6a9abc;
     margin-top: 0;
     margin-bottom: 4rem;
 }
 
 .resumeSidehead {
     font-size: .85rem;
-    line-height: 3.5;
+    color: #6a9abc;
+    line-height: 3.85;
     font-weight: 600;
     color: #5a5a5a;
     margin-top: 0;
@@ -349,8 +350,8 @@ resumeHeader {
 
 .resumeSidebar {
     padding: 0px 0px 0px 72px;
-
 }
+
 
 /*
 p {
@@ -601,7 +602,7 @@ footer {
     height: 24vh;
     margin-left: 0;
     background: black;
-    padding: 48px 24px 24px 24px;
+    padding: 72px 24px 24px 24px;
     font-size: 0.85em;
     text-align: center;
     margin-top: 0em;
