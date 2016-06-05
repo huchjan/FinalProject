@@ -33,6 +33,15 @@ app.get('/projects', function (req, res) {
 
 //This is the route to the project page
 //:slug is a variable
+app.get("/tradeshows/:slug", function (req, res) {
+    //get the project data based on the requested slug
+    var projectData = getProjectBySlug(req.params.slug);
+    //render the "projects.handlebars" template using the project data
+    res.render('tradeshows', {
+        project: projectData
+    });
+});
+
 app.get("/misc/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
@@ -89,9 +98,9 @@ function getProjectBySlug(slug) {
 var projects = [
     {
         slug: "mlk_tshirt",
-        name: "MLK Day sweatshirt design",
+        name: "MLK Day sweatshirt",
         image: "mlk_illus.png",
-        desc: "Sweatshirt design for Williams employees participating in Tulsa's Martin Luther King Day parade.",
+        desc: "Design created for a sweatshirt given to Williams employees participating in Tulsa's Martin Luther King Day parade.",
         cat: "MISCELLANEOUS"
     },
     {
@@ -113,7 +122,7 @@ var projects = [
         name: "Williams Tradeshow Display",
         image: "Tradeshow1.jpg",
         desc: "Popup display created for Williams' Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a tv monitor.",
-        cat: "MISCELLANEOUS"
+        cat: "TRADE SHOWS"
     },
     {
         slug: "annual_enrollment",
@@ -124,7 +133,7 @@ var projects = [
     },
     {
         slug: "tradition_broch",
-        name: "A Tradition America Counts On brochure",
+        name: "Williams capabilities brochure",
         image: "Tradition_brochure_med.jpg",
         desc: "Capabilities brochure designed and produced for Williams",
         cat: "BROCHURES"

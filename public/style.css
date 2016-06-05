@@ -230,7 +230,9 @@ hover effects
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #5a5a5a;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 18px;
+    text-align: left;
 }
 
 .item_container:hover .item_hover {
@@ -505,6 +507,21 @@ hr {
     text-align: left;
     border: none;
     margin: 0 auto 0 0;
+}
+
+
+.category_title {
+    color: white;
+    letter-spacing: 1px;
+    padding-left: 18px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.category_text {
+    color: white;
+    padding-left: 18px;
+    text-align: left;
 }
 
 .categorySpace {
