@@ -86,6 +86,18 @@ app.get("/annuals/:slug", function (req, res) {
         project: projectData
     });
 });
+
+//define(function (require) {
+//Define the header and footer partials for the Handlebars
+//User these partials as {{>header}} anywhere in the templates
+//    var header = Handlebars.compile(require("text!templates/header.html"));
+//    Handlebars.registerPartial('header', header);
+//
+//    var footer = Handlebars.compile(require("text!templates/footer.html"));
+//    Handlebars.registerPartial('footer', footer);
+//});
+
+
 //get the project data based on the slug
 function getProjectBySlug(slug) {
     for (var i = 0; i < projects.length; i++) {
@@ -116,7 +128,7 @@ var projects = [
         image: "Vehicle_Wrap.jpg",
         desc: "When the WPX brand was launched in 2012, I designed the wrap for the company's trucks that ran on compressed natural gas.",
         cat: "MISCELLANEOUS"
-    }, 
+    },
     {
         slug: "wpx_tradeshow",
         name: "Williams Tradeshow Display",
@@ -160,27 +172,92 @@ var projects = [
         cat: "LOGOS"
     },
     {
-        slug: "teamwms_logos",
+        slug: "pacific_logos",
         name: "Team Williams MS150 logo",
-        image: "MS150_TeamWms.png",
+        image: "PacCon_logo.png",
         desc: "Logo designed for an annual 5k race in Tulsa.",
         cat: "LOGOS"
     },
     {
         slug: "minuteman_logos",
         name: "Minuteman Exploration logo",
-        image: "Minuteman_Logo.jpg",
+        image: "Minuteman_Logo.png",
         desc: "Logo designed for WPX Energy.",
         cat: "LOGOS"
     },
     {
         slug: "WPX_annual",
-        name: "WPX Energy Annual Report",
+        name: "2013 WPX Energy Annual Report",
         image: "WPX_Annual_Report2013.jpg",
-        desc: "Annual report project for WPX Energy.",
+        desc: "10k wrap for WPX Energy's annual report to its shareholders. Book was perfect bound and printed 4-color process for the wrap and one color on the 10k.",
         cat: "ANNUAL REPORTS"
     }
 ];
+
+
+
+
+//
+//jQuery(document).ready(function ($) {
+//
+//  $('#checkbox').change(function(){
+//    setInterval(function () {
+//        moveRight();
+//    }, 3000);
+//  });
+//  
+//	var slideCount = $('#slider ul li').length;
+//	var slideWidth = $('#slider ul li').width();
+//	var slideHeight = $('#slider ul li').height();
+//	var sliderUlWidth = slideCount * slideWidth;
+//	
+//	$('#slider').css({ width: slideWidth, height: slideHeight });
+//	
+//	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+//	
+//    $('#slider ul li:last-child').prependTo('#slider ul');
+//
+//    function moveLeft() {
+//        $('#slider ul').animate({
+//            left: + slideWidth
+//        }, 200, function () {
+//            $('#slider ul li:last-child').prependTo('#slider ul');
+//            $('#slider ul').css('left', '');
+//        });
+//    };
+//
+//    function moveRight() {
+//        $('#slider ul').animate({
+//            left: - slideWidth
+//        }, 200, function () {
+//            $('#slider ul li:first-child').appendTo('#slider ul');
+//            $('#slider ul').css('left', '');
+//        });
+//    };
+//
+//    $('a.control_prev').click(function () {
+//        moveLeft();
+//    });
+//
+//    $('a.control_next').click(function () {
+//        moveRight();
+//    });
+//
+//});
+
+
+
+
+//var page1 = Backbone.View.extend({
+//    template: Handlebars.compile(require("text!templates/page1.html")),
+//    render: function () {
+//        this.$el.html(_self.template());
+//        $("body .main").html(_self.$el);
+//        
+//header HTML is available inside $el of this view
+//$header = this.$(".header");
+//    }
+//});
 
 
 
