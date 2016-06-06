@@ -161,7 +161,7 @@ var projects = [
         slug: "rigmosaic_invite",
         name: "Rig Mosaic invitation",
         image: "RigMosaicInvite.jpg",
-        desc: "Invitation created for the unveiling of a mosaic commissioned by Williams.",
+        desc: "Cover of an invitation created for the unveiling of a mosaic commissioned by Williams.",
         cat: "INVITATIONS"
     },
     {

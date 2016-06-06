@@ -86,6 +86,7 @@ normal {
     .two.columns {
         width: calc(16.66667% - 1em);
     }
+
     .three.column,
     .three.columns,
     .one-quarter.column,
@@ -592,20 +593,20 @@ hr {
 */
 
 .footerServices {
-    font-size: 0.85em;
-    letter-spacing="5px";
+    font-size: 1.25em;
+    letter-spacing: 5px;
 }
 
 footer {
     color: #a2a2a2;
-    line-height: 8;
+    line-height: 5;
     /*    text-transform: uppercase;*/
     width: 100vw;
-    height: 24vh;
+    height: 26vh;
     margin-left: 0;
     background: black;
-    padding: 6px 0px 0px 0px;
-    font-size: 0.85em;
+    padding: 14px 0px 0px 0px;
+    font-size: .85em;
     text-align: center;
 }
 
