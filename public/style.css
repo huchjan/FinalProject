@@ -594,7 +594,6 @@ hr {
 .footerServices {
     font-size: 0.85em;
     letter-spacing="5px";
-    margin-top: 0px 0px 0px 0px;
 }
 
 footer {
@@ -605,10 +604,9 @@ footer {
     height: 24vh;
     margin-left: 0;
     background: black;
-    padding: 12px 0px 0px 0px;
+    padding: 6px 0px 0px 0px;
     font-size: 0.85em;
     text-align: center;
-    margin-top: 0em;
 }
 
 .projects {
