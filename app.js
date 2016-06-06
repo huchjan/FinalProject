@@ -147,7 +147,7 @@ var projects = [
         slug: "campfire_broch",
         name: "Campfire USA brochure",
         image: "Camp_Fire_Brochure.jpg",
-        desc: "Camp Fire USA pro bono brochure created while serving on Camp Fire's Green Country Council PR Committee.",
+        desc: "Pro bono tri-fold brochure created for Camp Fire USA while serving on the Green Country Council's PR Committee.",
         cat: "BROCHURES"
     },
     {
