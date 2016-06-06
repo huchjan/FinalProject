@@ -141,14 +141,16 @@ var projects = [
         name: "Williams Benefits Brochure",
         image: "Health_Care_Broch.jpg",
         desc: "Part of Williams' annual benefits enrollment rollout, this brochure was designed to let employees and retirees know how to get the most from their healthcare benefits.",
-        cat: "BROCHURES"
+        cat: "BROCHURES",
+        right: "campfire_broch"
     },
     {
         slug: "campfire_broch",
         name: "Campfire USA brochure",
         image: "Camp_Fire_Brochure.jpg",
         desc: "Pro bono tri-fold brochure created for Camp Fire USA while serving on the Green Country Council's PR Committee.",
-        cat: "BROCHURES"
+        cat: "BROCHURES",
+        left: "annual_enrollment"
     },
     {
         slug: "worldchallenge_invite",

@@ -1,18 +1,39 @@
-   <div class="container">
+<div class="container">
     <br>
     <br>
     <br>
     <div class="twelve columns">
     </div>
     <div class="row">
-        <div class="two-thirds column">
-            <img src="/images/{{project.image}}" class="u-img-responsive projectsImg" />
+        <div class="one column">
+            {{#if project.right}}
+            <a href="./{{project.right}}">
+                <img class="category_rtArrow" src="/images/arrow_rt.png" class="u-img-responsive projectsImg" />
+            </a>
+            {{/if}}
         </div>
-        <div class="one-third column projectsCategory">
-            <hr class="category_hr">
-            <br>
-            <bold>{{project.cat}}</bold>
+        <div class="item_container">
+            <div class="six columns">
+                <img src="/images/{{project.image}}" class="u-img-responsive projectsImg" />
+            </div>
         </div>
-        <h6>{{project.name}}</h6> {{project.desc}}
+        <div class="container">
+            <div class="four columns projectsCategory">
+                <hr class="category_hr">
+                <br>
+                <div>{{project.cat}}</div>
+                <h6>{{project.name}}</h6>
+                <div>{{project.desc}}</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="one column">
+                {{#if project.right}}
+                <a href="./{{project.right}}">
+                    <img class="category_rtArrow" src="/images/arrow_rt.png" class="u-img-responsive projectsImg" />
+                </a>
+                {{/if}}
+            </div>
+        </div>
     </div>
 </div>
