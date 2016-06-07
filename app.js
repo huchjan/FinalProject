@@ -37,7 +37,7 @@ app.get("/tradeshows/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
     //render the "projects.handlebars" template using the project data
-    res.render('tradeshows', {
+    res.render('project', {
         project: projectData
     });
 });
@@ -46,7 +46,7 @@ app.get("/misc/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
     //render the "projects.handlebars" template using the project data
-    res.render('misc', {
+    res.render('project', {
         project: projectData
     });
 });
@@ -55,7 +55,7 @@ app.get("/brochures/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
     //render the "projects.handlebars" template using the project data
-    res.render('brochures', {
+    res.render('project', {
         project: projectData
     });
 });
@@ -64,7 +64,7 @@ app.get("/invitations/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
     //render the "projects.handlebars" template using the project data
-    res.render('invitations', {
+    res.render('project', {
         project: projectData
     });
 });
@@ -73,7 +73,7 @@ app.get("/logos/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
     //render the "projects.handlebars" template using the project data
-    res.render('logos', {
+    res.render('project', {
         project: projectData
     });
 });
@@ -82,7 +82,7 @@ app.get("/annuals/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
     //render the "projects.handlebars" template using the project data
-    res.render('annuals', {
+    res.render('project', {
         project: projectData
     });
 });
@@ -109,40 +109,22 @@ function getProjectBySlug(slug) {
 
 var projects = [
     {
-        slug: "mlk_tshirt",
-        name: "MLK Day sweatshirt",
-        image: "mlk_illus.png",
-        desc: "Design created for a sweatshirt given to Williams employees participating in Tulsa's Martin Luther King Day parade.",
-        cat: "MISCELLANEOUS"
+        slug: "WPX_annual",
+        name: "2013 WPX Energy Annual Report",
+        image: "WPX_Annual_Report2013.jpg",
+        desc: "10k wrap for WPX Energy&rsquo;s annual report to its shareholders. Book was perfect bound and printed 4-color process for the wrap and one color on the 10k.",
+        cat: "ANNUAL REPORTS",
+        left: "wpx_tradeshow",
+        right: "../brochures/annual_enrollment",
+        small_images: ["WPX_AR_Inside.jpg"]
     },
-    {
-        slug: "wpx_tshirt",
-        name: "WPX Family Picnic Tee",
-        image: "WPX_Picnic_Tee.jpg",
-        desc: "T-shirt designed for a WPX employee event at the Tulsa Drillers' new ballpark",
-        cat: "MISCELLANEOUS"
-    },
-    {
-        slug: "wpx_vehiclewrap",
-        name: "WPX Vehicle Wrap",
-        image: "Vehicle_Wrap.jpg",
-        desc: "When the WPX brand was launched in 2012, I designed the wrap for the company's trucks that ran on compressed natural gas.",
-        cat: "MISCELLANEOUS"
-    },
-    {
-        slug: "wpx_tradeshow",
-        name: "Williams Tradeshow Display",
-        image: "Tradeshow1.jpg",
-        desc: "Popup display created for Williams' Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a tv monitor.",
-        cat: "TRADE SHOWS"
-    },
-    {
+     {
         slug: "annual_enrollment",
         name: "Williams Benefits Brochure",
         image: "Health_Care_Broch.jpg",
-        desc: "Part of Williams' annual benefits enrollment rollout, this brochure was designed to let employees and retirees know how to get the most from their healthcare benefits.",
+        desc: "Part of Williams&rsquo; annual benefits enrollment rollout, this brochure was designed to let employees and retirees know how to get the most from their healthcare benefits.",
         cat: "BROCHURES",
-        left: "wpx_tradeshow",
+        left: "WPX_annual",
         right: "campfire_broch"
     },
     {
@@ -159,43 +141,81 @@ var projects = [
         name: "Williams World Challenge invitation",
         image: "World_Challenge_Invite.jpg",
         desc: "Invitation and custom golf ball sleeve created for The Williams World Challenge. Williams partnered with the Tiger Woods Foundation, which benefitted underprivileged kids, and was a major sponsor for several years.",
-        cat: "INVITATIONS"
+        cat: "INVITATIONS",
+        left: "campfire_broch",
+        right: "rigmosaic_invite"
     },
     {
         slug: "rigmosaic_invite",
         name: "Rig Mosaic invitation",
         image: "RigMosaicInvite.jpg",
         desc: "Cover of an invitation created for the unveiling of a mosaic commissioned by Williams.",
-        cat: "INVITATIONS"
+        cat: "INVITATIONS",
+        left: "worldchallenge_invite",
+        right: "stpats5k_logos"
     },
     {
         slug: "stpats5k_logos",
-        name: "St. Patrick's Day 5k logo",
+        name: "St. Patrick&rsquo;s Day 5k logo",
         image: "St_Patricks_Day_5k.png",
         desc: "Logo designed for an annual 5k race in Tulsa.",
-        cat: "LOGOS"
+        cat: "LOGOS",
+        left: "rigmosaic_invite",
+        right: "pacific_logos"
     },
     {
         slug: "pacific_logos",
         name: "Team Williams MS150 logo",
         image: "PacCon_logo.png",
         desc: "Logo designed for an annual 5k race in Tulsa.",
-        cat: "LOGOS"
+        cat: "LOGOS",
+        left: "stpats5k_logos",
+        right: "minuteman_logos"
     },
     {
         slug: "minuteman_logos",
         name: "Minuteman Exploration logo",
         image: "Minuteman_Logo.png",
         desc: "Logo designed for WPX Energy.",
-        cat: "LOGOS"
+        cat: "LOGOS",
+        left: "pacific_logos",
+        right: "mlk_tshirt"
     },
     {
-        slug: "WPX_annual",
-        name: "2013 WPX Energy Annual Report",
-        image: "WPX_Annual_Report2013.jpg",
-        desc: "10k wrap for WPX Energy's annual report to its shareholders. Book was perfect bound and printed 4-color process for the wrap and one color on the 10k.",
-        cat: "ANNUAL REPORTS",
-        small_images: ["WPX_AR_Inside.jpg"]
+        slug: "mlk_tshirt",
+        name: "MLK Day sweatshirt",
+        image: "mlk_illus.png",
+        desc: "Design created for a sweatshirt given to Williams employees participating in Tulsa&rsquo;s Martin Luther King Day parade.",
+        cat: "MISCELLANEOUS",
+        left: "minuteman_logos",
+        right: "wpx_tshirt"
+    },
+    {
+        slug: "wpx_tshirt",
+        name: "WPX Family Picnic Tee",
+        image: "WPX_Picnic_Tee.jpg",
+        desc: "T-shirt designed for a WPX employee event at the Tulsa Drillers&rsquo; new ballpark",
+        cat: "MISCELLANEOUS",
+        left: "mlk_tshirt",
+        right: "wpx_vehiclewrap"
+    },
+    {
+        slug: "wpx_vehiclewrap",
+        name: "WPX Vehicle Wrap",
+        image: "Vehicle_Wrap.jpg",
+        desc: "When the WPX brand was launched in 2012, I designed the wrap for the company&rsquo;s trucks that ran on compressed natural gas.",
+        cat: "MISCELLANEOUS",
+        left: "wpx_tshirt",
+        right: "wpx_tradeshow"
+    },
+    {
+        slug: "wpx_tradeshow",
+        name: "Williams Tradeshow Display",
+        image: "Tradeshow1.jpg",
+        desc: "Pop-up display created for Williams<&rsquo;> Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a tv monitor.",
+        cat: "TRADE SHOWS",
+        left: "wpx_vehiclewrap",
+        right: "WPX_annual"
     }
 ];
 
