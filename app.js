@@ -131,7 +131,7 @@ var projects = [
         slug: "campfire_broch",
         name: "Campfire USA brochure",
         image: "Camp_Fire_Brochure.jpg",
-        desc: "Pro bono tri-fold brochure created for Camp Fire USA while serving on the Green Country Council's PR Committee.",
+        desc: "Pro bono tri-fold brochure created for Camp Fire USA while serving on the Green Country Council&rsquo;s PR Committee.",
         cat: "BROCHURES",
         left: "annual_enrollment",
         right: "worldchallenge_invite"
@@ -212,7 +212,7 @@ var projects = [
         slug: "wpx_tradeshow",
         name: "Williams Tradeshow Display",
         image: "Tradeshow1.jpg",
-        desc: "Pop-up display created for Williams<&rsquo;> Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a tv monitor.",
+        desc: "Pop-up display created for Williams&rsquo; Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a tv monitor.",
         cat: "TRADE SHOWS",
         left: "wpx_vehiclewrap",
         right: "WPX_annual"
