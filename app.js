@@ -142,6 +142,7 @@ var projects = [
         image: "Health_Care_Broch.jpg",
         desc: "Part of Williams' annual benefits enrollment rollout, this brochure was designed to let employees and retirees know how to get the most from their healthcare benefits.",
         cat: "BROCHURES",
+        left: "wpx_tradeshow",
         right: "campfire_broch"
     },
     {
@@ -150,7 +151,8 @@ var projects = [
         image: "Camp_Fire_Brochure.jpg",
         desc: "Pro bono tri-fold brochure created for Camp Fire USA while serving on the Green Country Council's PR Committee.",
         cat: "BROCHURES",
-        left: "annual_enrollment"
+        left: "annual_enrollment",
+        right: "worldchallenge_invite"
     },
     {
         slug: "worldchallenge_invite",
@@ -169,7 +171,7 @@ var projects = [
     {
         slug: "stpats5k_logos",
         name: "St. Patrick's Day 5k logo",
-        image: "St_Patricks_Day_5k.jpg",
+        image: "St_Patricks_Day_5k.png",
         desc: "Logo designed for an annual 5k race in Tulsa.",
         cat: "LOGOS"
     },
@@ -192,7 +194,8 @@ var projects = [
         name: "2013 WPX Energy Annual Report",
         image: "WPX_Annual_Report2013.jpg",
         desc: "10k wrap for WPX Energy's annual report to its shareholders. Book was perfect bound and printed 4-color process for the wrap and one color on the 10k.",
-        cat: "ANNUAL REPORTS"
+        cat: "ANNUAL REPORTS",
+        small_images: ["WPX_AR_Inside.jpg"]
     }
 ];
 

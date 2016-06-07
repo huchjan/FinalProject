@@ -210,6 +210,7 @@ normal {
 html {
     font-size: 1em;
     box-sizing: border-box;
+   
 }
 
 *,
@@ -234,11 +235,13 @@ hover effects
     text-align: center;
 }
 
+/*
 .img {
     position: relative;
     width: 100%;
     height: 100%;
 }
+*/
 
 .item_hover {
     display: none;
@@ -580,11 +583,19 @@ hr {
     vertical-align: bottom;
 }
 
-.category_rtArrow {
-    vertical-align: middle;
-    align-items: right;
+.category_lftArrow {
+    position: absolute;
+    z-index: 10;
+    margin-left: 0;
+    margin-top: -25%;
 }
-/*
+
+.category_rtArrow {
+    position: absolute;
+    z-index: 10;
+    margin-left: 95%;
+    margin-top: -25%;
+}
 .categorySpace {
     height: 48px;
     background-color: white;
@@ -592,7 +603,6 @@ hr {
     border: none;
     margin: 0 auto 0 0;
 }
-*/
 
 .name {
     color: black;
@@ -613,91 +623,25 @@ hr {
 }
 
 .footerServices {
-    font-size: 1.25em;
-    letter-spacing: 5px;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    padding: 0px 0px 30px 0px;
 }
 
 footer {
     color: #a2a2a2;
-    line-height: 5;
+    line-height: 4;
     /*    text-transform: uppercase;*/
-    width: 100vw;
+    width: 100%;
     height: 26vh;
     margin-left: 0;
     background: black;
-    padding: 14px 0px 0px 0px;
-    font-size: .85em;
+    padding: 10px 0px 0px 0px;
+    font-size: .75em;
+    letter-spacing: .5px;
     text-align: center;
 }
 
 .projects {
     line-height: 1.25;
 }
-
-
-/*
-#slider {
-  position: relative;
-  overflow: hidden;
-  margin: 20px auto 0 auto;
-  border-radius: 4px;
-}
-
-#slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 200px;
-  list-style: none;
-}
-
-#slider ul li {
-  position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 500px;
-  height: 300px;
-  background: #ccc;
-  text-align: center;
-  line-height: 300px;
-}
-
-a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease;
-}
-
-a.control_prev {
-  border-radius: 0 2px 2px 0;
-}
-
-a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px;
-}
-
-.slider_option {
-  position: relative;
-  margin: 10px auto;
-  width: 160px;
-  font-size: 18px;
-}*/
