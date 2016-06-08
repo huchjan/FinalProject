@@ -11,6 +11,12 @@ $(document).ready(function () {
 
 $(document).ready(function(){
 	$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-		$(this).toggleClass('open');
+		$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4, #mobile-nav').toggleClass('open');
 	});
 });
+
+//$(document).ready(function(){
+//	$('#hamburger').click(function(){
+//	    $('#mylinks, #hamburger').toggleClass('open');
+//	});
+//});
