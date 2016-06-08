@@ -5,38 +5,38 @@
     <div class="twelve columns">
     </div>
     <div class="row">
-
         <div class="two-thirds column">
             <img src="/images/{{project.image}}" class="u-img-responsive projectsImg" />
-            {{#each project.small_images}}
-                <img src="/images/{{this}}" class="projectsImg-small u-img-responsive projectsImg">
-            {{/each}}
+             {{#each project.small_images}}
+            <img src="/images/{{this}}" class="projectsImg-small u-img-responsive projectsImg"> {{/each}}
         </div>
 
         <div class="one-third column projectsCategory">
             <hr class="category_hr">
-            <br>
-            {{project.cat}}
-        </div>    
+            <br> {{project.cat}}
+        </div>
         <div class="one-third column">
-        <h6>{{{project.name}}}</h6> {{{project.desc}}}
+            <h6>{{{project.name}}}</h6> {{{project.desc}}}
+        </div>
+        <div class="projectsRow"></div>
     </div>
-                <div class="projectsRow"></div>
 </div>
+    
 
 
-<div class="category_lftArrow">
-    {{#if project.left}}
-    <a href="./{{project.left}}">
-        <img src="/images/arrow_lft.png" class="u-img-responsive" />
-    </a>
-    {{/if}}
-</div>
+    <div class="category_lftArrow">
+        {{#if project.left}}
+        <a href="./{{project.left}}">
+            <img src="/images/arrow_lft.png" class="u-img-responsive" />
+        </a>
+        {{/if}}
+    </div>
 
-<div class="category_rtArrow">
-    {{#if project.right}}
-    <a href="./{{project.right}}">
-        <img src="/images/arrow_rt.png" class="u-img-responsive" />
-    </a>
-    {{/if}}
-</div>
+    <div class="category_rtArrow">
+        {{#if project.right}}
+        <a href="./{{project.right}}">
+            <img src="/images/arrow_rt.png" class="u-img-responsive" />
+        </a>
+        {{/if}}
+
+    </div>
