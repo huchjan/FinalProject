@@ -118,7 +118,7 @@ var projects = [
         right: "../brochures/annual_enrollment",
         small_images: ["WPX_AR_Inside.jpg"]
     },
-     {
+    {
         slug: "annual_enrollment",
         name: "Williams Benefits Brochure",
         image: "Health_Care_Broch.jpg",
@@ -134,15 +134,24 @@ var projects = [
         desc: "Pro bono tri-fold brochure created for Camp Fire USA while serving on the Green Country Council&rsquo;s PR Committee.",
         cat: "BROCHURES",
         left: "annual_enrollment",
-        right: "worldchallenge_invite"
+        right: "../invitations/worldchallenge_invite"
     },
     {
         slug: "worldchallenge_invite",
         name: "Williams World Challenge invitation",
         image: "World_Challenge_Invite.jpg",
-        desc: "Invitation and custom golf ball sleeve created for The Williams World Challenge. Williams partnered with the Tiger Woods Foundation, which benefitted underprivileged kids, and was a major sponsor for several years.",
+        desc: "Invitation and custom golf ball sleeve created for the Williams World Challenge. Williams partnered with the Tiger Woods Foundation, which benefitted underprivileged kids, and was a major sponsor for several years.",
         cat: "INVITATIONS",
         left: "campfire_broch",
+        right: "nutcracker_invite"
+    },
+    {
+        slug: "nutcracker_invite",
+        name: "Williams Nutcracker Market invitation",
+        image: "NutcrackerMktInvite.jpg",
+        desc: "Evite for a Williams Midstream customer event in Houston.",
+        cat: "INVITATIONS",
+        left: "worldchallenge_invite",
         right: "rigmosaic_invite"
     },
     {
@@ -151,8 +160,8 @@ var projects = [
         image: "RigMosaicInvite.jpg",
         desc: "Cover of an invitation created for the unveiling of a mosaic commissioned by Williams.",
         cat: "INVITATIONS",
-        left: "worldchallenge_invite",
-        right: "stpats5k_logos"
+        left: "nutcracker_invite",
+        right: "../logos/stpats5k_logos"
     },
     {
         slug: "stpats5k_logos",
@@ -165,9 +174,9 @@ var projects = [
     },
     {
         slug: "pacific_logos",
-        name: "Team Williams MS150 logo",
+        name: "Pacific Connector logo",
         image: "PacCon_logo.png",
-        desc: "Logo designed for an annual 5k race in Tulsa.",
+        desc: "Logo designed for Williams for a proposed 232-mile pipeline project that will provide natural gas to the pacific northwest and international markets.",
         cat: "LOGOS",
         left: "stpats5k_logos",
         right: "minuteman_logos"
@@ -179,7 +188,7 @@ var projects = [
         desc: "Logo designed for WPX Energy.",
         cat: "LOGOS",
         left: "pacific_logos",
-        right: "mlk_tshirt"
+        right: "../misc/mlk_tshirt"
     },
     {
         slug: "mlk_tshirt",
@@ -194,7 +203,7 @@ var projects = [
         slug: "wpx_tshirt",
         name: "WPX Family Picnic Tee",
         image: "WPX_Picnic_Tee.jpg",
-        desc: "T-shirt designed for a WPX employee event at the Tulsa Drillers&rsquo; new ballpark",
+        desc: "T-shirt designed for WPX employees for a family picnic at the Drillers&rsquo; ONEOK Field in downtown Tulsa, Oklahoma.",
         cat: "MISCELLANEOUS",
         left: "mlk_tshirt",
         right: "wpx_vehiclewrap"
@@ -206,7 +215,7 @@ var projects = [
         desc: "When the WPX brand was launched in 2012, I designed the wrap for the company&rsquo;s trucks that ran on compressed natural gas.",
         cat: "MISCELLANEOUS",
         left: "wpx_tshirt",
-        right: "wpx_tradeshow"
+        right: "../tradeshows/wpx_tradeshow"
     },
     {
         slug: "wpx_tradeshow",
@@ -215,74 +224,9 @@ var projects = [
         desc: "Pop-up display created for Williams&rsquo; Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a tv monitor.",
         cat: "TRADE SHOWS",
         left: "wpx_vehiclewrap",
-        right: "WPX_annual"
+        right: "../annuals/WPX_annual"
     }
 ];
-
-
-
-
-//
-//jQuery(document).ready(function ($) {
-//
-//  $('#checkbox').change(function(){
-//    setInterval(function () {
-//        moveRight();
-//    }, 3000);
-//  });
-//  
-//	var slideCount = $('#slider ul li').length;
-//	var slideWidth = $('#slider ul li').width();
-//	var slideHeight = $('#slider ul li').height();
-//	var sliderUlWidth = slideCount * slideWidth;
-//	
-//	$('#slider').css({ width: slideWidth, height: slideHeight });
-//	
-//	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-//	
-//    $('#slider ul li:last-child').prependTo('#slider ul');
-//
-//    function moveLeft() {
-//        $('#slider ul').animate({
-//            left: + slideWidth
-//        }, 200, function () {
-//            $('#slider ul li:last-child').prependTo('#slider ul');
-//            $('#slider ul').css('left', '');
-//        });
-//    };
-//
-//    function moveRight() {
-//        $('#slider ul').animate({
-//            left: - slideWidth
-//        }, 200, function () {
-//            $('#slider ul li:first-child').appendTo('#slider ul');
-//            $('#slider ul').css('left', '');
-//        });
-//    };
-//
-//    $('a.control_prev').click(function () {
-//        moveLeft();
-//    });
-//
-//    $('a.control_next').click(function () {
-//        moveRight();
-//    });
-//
-//});
-
-
-
-
-//var page1 = Backbone.View.extend({
-//    template: Handlebars.compile(require("text!templates/page1.html")),
-//    render: function () {
-//        this.$el.html(_self.template());
-//        $("body .main").html(_self.$el);
-//        
-//header HTML is available inside $el of this view
-//$header = this.$(".header");
-//    }
-//});
 
 
 

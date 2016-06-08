@@ -8,16 +8,22 @@
 
         <div class="two-thirds column">
             <img src="/images/{{project.image}}" class="u-img-responsive projectsImg" />
+            {{#each project.small_images}}
+                <img src="/images/{{this}}" class="projectsImg-small u-img-responsive projectsImg">
+            {{/each}}
         </div>
+
         <div class="one-third column projectsCategory">
             <hr class="category_hr">
             <br>
-            <bold>{{project.cat}}</bold>
-        </div>
+            {{project.cat}}
+        </div>    
+        <div class="one-third column">
         <h6>{{{project.name}}}</h6> {{{project.desc}}}
     </div>
-             <div class="projectsRow"></div>
+                <div class="projectsRow"></div>
 </div>
+
 
 <div class="category_lftArrow">
     {{#if project.left}}
