@@ -34,6 +34,15 @@ app.get('/projects', function (req, res) {
 //This is the route to the project page
 //:slug is a variable
 
+app.get("/advertising/:slug", function (req, res) {
+    //get the project data based on the requested slug
+    var projectData = getProjectBySlug(req.params.slug);
+    //render the "projects.handlebars" template using the project data
+    res.render('project', {
+        project: projectData
+    });
+});
+
 app.get("/annuals/:slug", function (req, res) {
     //get the project data based on the requested slug
     var projectData = getProjectBySlug(req.params.slug);
@@ -119,13 +128,33 @@ function getProjectBySlug(slug) {
 }
 
 var projects = [
+    
+    
+      {
+        slug: "WPX_advertising",
+        name: "Holiday ad for WPX Energy",
+        image: "WPXchristmas_Ad.jpg",
+        desc: "10k wrap for WPX Energy&rsquo;s annual report to its shareholders. Book was perfect bound and printed 4-color process for the wrap and one color on the 10k.",
+        cat: "ADVERTISING",
+        left: "../tradeshows/wpx_tradeshow",
+        right: "../annuals/WPX_annual"
+    },
     {
         slug: "WPX_annual",
         name: "2013 WPX Energy annual report",
         image: "WPX_Annual_Report2013.jpg",
         desc: "10k wrap for WPX Energy&rsquo;s annual report to its shareholders. Book was perfect bound and printed 4-color process for the wrap and one color on the 10k.",
         cat: "ANNUAL REPORTS",
-        left: "../tradeshows/wpx_tradeshow",
+        left: "../advertising/WPX_advertising",
+        right: "../annuals/WCG_annual"
+    },
+     {
+        slug: "WCG_annual",
+        name: "Williams Communications Group annual report",
+        image: "WCG_annual.jpg",
+        desc: "Annual report for spinoff telecom company.",
+        cat: "ANNUAL REPORTS",
+        left: "WPX_annual",
         right: "../brochures/annual_enrollment"
     },
     {
@@ -134,7 +163,7 @@ var projects = [
         image: "Health_Care_Broch.jpg",
         desc: "Part of Williams&rsquo; annual benefits enrollment rollout, this brochure was designed to let employees and retirees know how to get the most from their healthcare benefits.",
         cat: "BROCHURES",
-        left: "../annuals/WPX_annual",
+        left: "../annuals/WCG_annual",
         right: "campfire_broch"
     },
     {
@@ -162,6 +191,15 @@ var projects = [
         desc: "Invitation and custom golf ball sleeve created for the Williams World Challenge. Williams partnered with the Tiger Woods Foundation, which benefitted underprivileged kids, and was a major sponsor for several years.",
         cat: "INVITATIONS",
         left: "../digital/digital_graph",
+        right: "saenger_invite"
+    },
+     {
+        slug: "saenger_invite",
+        name: "Williams customer event invitation",
+        image: "SaengerTheatreInvite.jpg",
+        desc: "Invitation and RSVP created for a customer event at New Orleans&rsquo; historic Saenger Theatre.",
+        cat: "INVITATIONS",
+        left: "worldchallenge_invite",
         right: "nwp_invite"
     },
     {
@@ -249,10 +287,10 @@ var projects = [
         slug: "wpx_tradeshow",
         name: "Williams tradeshow display",
         image: "Tradeshow1.jpg",
-        desc: "Pop-up display created for Williams&rsquo; Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a tv monitor.",
+        desc: "Pop-up display created for Williams&rsquo; Midstream group to use at industry tradeshows. It needed to be a small, quick-to-assemble display that accommodated a TV monitor.",
         cat: "TRADE SHOWS",
         left: "../misc/wpx_vehiclewrap",
-        right: "../annuals/WPX_annual"
+        right: "../advertising/WPX_advertising"
     }
 ];
 

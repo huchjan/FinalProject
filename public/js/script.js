@@ -17,6 +17,6 @@ $(document).ready(function(){
 
 //$(document).ready(function(){
 //	$('#hamburger').click(function(){
-//	    $('#mylinks, #hamburger').toggleClass('open');
+//	    $(this).toggleClass('open');
 //	});
 //});
