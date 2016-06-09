@@ -613,6 +613,7 @@ hr {
 .category_lftArrow {
     position: absolute;
     z-index: 10;
+    width: 30px;
     left: 5px;
     margin-top: -27%;
 }
@@ -620,6 +621,7 @@ hr {
 .category_rtArrow {
     position: absolute;
     z-index: 10;
+    width: 30px;
     right: 5px;
     margin-top: -27%;
 }
@@ -888,6 +890,6 @@ footer {
     .home_grid_column {
         width: 25%;
         float: left;
-        font-size: 75%;
+        font-size: 95%;
     }
 }
